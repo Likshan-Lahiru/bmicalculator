@@ -51,8 +51,19 @@ class _mainPageState extends State<mainPage> {
                   padding: EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Icon(Icons.male, size: 150,),
-                      Text("Male"),
+                      Text("Height"),
+                      Text("176", style: TextStyle(color: Color(0xFFFF8888),fontSize: 50,fontWeight: FontWeight.bold
+                      )
+                      ),
+                      Row(children: [
+                        FloatingActionButton(onPressed: null,child: Icon(Icons.add,size: 40,
+                        ),
+                        ),
+                        FloatingActionButton(onPressed: null,child: Icon(Icons.remove,size: 40,color: Color(),
+                        ),
+                        ),
+                      ],
+                      ),
                     ],
                   ),
                 ),
