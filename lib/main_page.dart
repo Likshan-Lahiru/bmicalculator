@@ -52,14 +52,14 @@ class _mainPageState extends State<mainPage> {
                   child: Column(
                     children: [
                       Text("Height"),
-                      Text("176", style: TextStyle(color: Color(0xFFFF8888),fontSize: 50,fontWeight: FontWeight.bold
+                      Text("176", style: TextStyle(color: Color(0xFFFF8888),fontSize: 50,fontWeight: FontWeight.bold, 
                       )
                       ),
                       Row(children: [
-                        FloatingActionButton(onPressed: null,child: Icon(Icons.remove,size: 40,
+                        FloatingActionButton(onPressed: null,child: Icon(Icons.remove,size: 40,color: Colors.red,
                         ),
                         ),
-                        FloatingActionButton(onPressed: null,child: Icon(Icons.add,size: 40,
+                        FloatingActionButton(onPressed: null,child: Icon(Icons.add,size: 40, color: Colors.blue,
                         ),
                         ),
                         
