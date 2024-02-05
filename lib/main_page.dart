@@ -56,12 +56,13 @@ class _mainPageState extends State<mainPage> {
                       )
                       ),
                       Row(children: [
+                        FloatingActionButton(onPressed: null,child: Icon(Icons.remove,size: 40,
+                        ),
+                        ),
                         FloatingActionButton(onPressed: null,child: Icon(Icons.add,size: 40,
                         ),
                         ),
-                        FloatingActionButton(onPressed: null,child: Icon(Icons.remove,size: 40,color: Color(),
-                        ),
-                        ),
+                        
                       ],
                       ),
                     ],
