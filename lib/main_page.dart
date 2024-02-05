@@ -56,6 +56,7 @@ class _mainPageState extends State<mainPage> {
                       )
                       ),
                       Row(children: [
+                        SizedBox(width: 20),
                         FloatingActionButton(onPressed: null,child: Icon(Icons.remove,size: 40,color: Colors.red,
                         ),
                         ),
@@ -74,8 +75,22 @@ class _mainPageState extends State<mainPage> {
                   padding: EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Icon(Icons.female, size: 150,),
-                      Text("FeeMale"),
+                      Text("Weight"),
+                      Text("176", style: TextStyle(color: Color(0xFFFF8888),fontSize: 50,fontWeight: FontWeight.bold, 
+                      )
+                      ),
+                      Row(children: [
+                        SizedBox(width: 20),
+                        FloatingActionButton(onPressed: null,child: Icon(Icons.remove,size: 40,color: Colors.red,
+                        ),
+                        ),
+                        SizedBox(width: 20),
+                        FloatingActionButton(onPressed: null,child: Icon(Icons.add,size: 40, color: Colors.blue,
+                        ),
+                        ),
+                        
+                      ],
+                      ),
                     ],
                   ),
                 ),
