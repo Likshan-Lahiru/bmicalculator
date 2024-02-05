@@ -91,6 +91,12 @@ class _mainPageState extends State<mainPage> {
                         
                       ],
                       ),
+                      Column(
+                        children: [
+                          Text("BMI"),
+                          Text("21.00")
+                        ],
+                      )
                     ],
                   ),
                 ),
