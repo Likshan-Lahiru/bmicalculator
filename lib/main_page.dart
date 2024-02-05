@@ -1,3 +1,4 @@
+import 'package:bmicalculator/constants.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
@@ -91,22 +92,31 @@ class _mainPageState extends State<mainPage> {
                         
                       ],
                       ),
-                      Column(
-                        children: [
-                          Text("BMI"),
-                          Text("21.00")
-                        ],
-                      )
+                      
                     ],
                   ),
                 ),
                 ],
-              )
+              ),
+              Column(
+                        children: [
+                          Text("BMI", style: TextStyle(
+                            color: ktextColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20 
+                          ),
+                           ),
+                          Text("21.00",
+                          style: TextStyle(
+                            color: ktextColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30
+                          ),
+                          )
+                        ],
+                      ),
           ],
-          
-          
-
-      ),
+        ),
     ),
     ) 
      
