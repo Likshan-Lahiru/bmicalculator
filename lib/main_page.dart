@@ -59,6 +59,7 @@ class _mainPageState extends State<mainPage> {
                         FloatingActionButton(onPressed: null,child: Icon(Icons.remove,size: 40,color: Colors.red,
                         ),
                         ),
+                        SizedBox(width: 20),
                         FloatingActionButton(onPressed: null,child: Icon(Icons.add,size: 40, color: Colors.blue,
                         ),
                         ),
