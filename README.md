@@ -1,4 +1,4 @@
-<img src="https://cdn.dribbble.com/users/997070/screenshots/3558444/media/fc0b60fdcc09d0a2f5c5db7eb5223d9f.gif">
+
 
 
 # bmicalculator
@@ -17,3 +17,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+<img src="https://cdn.dribbble.com/users/997070/screenshots/3558444/media/fc0b60fdcc09d0a2f5c5db7eb5223d9f.gif">
