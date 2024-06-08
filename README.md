@@ -1,3 +1,5 @@
+<img src="https://cdn.dribbble.com/users/287255/screenshots/6014581/media/8e12e9639f03cbc5b6580ae7ff3a6a58.gif">
+
 # bmicalculator
 
 A new Flutter project.
