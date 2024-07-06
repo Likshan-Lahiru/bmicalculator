@@ -11,6 +11,11 @@ class mainPage extends StatefulWidget {
 
 // ignore: camel_case_types
 class _mainPageState extends State<mainPage> {
+  int height = 20;
+  int Weight = 30;
+
+  late double bmiTotal = calculatorBMI(height: height, Weight: Weight);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +23,7 @@ class _mainPageState extends State<mainPage> {
       body: SafeArea(
         child:  Container(
       color: Colors.white,
-      child:  const Column(
+      child:   Column(
           children: [
             Row(
               children: [
@@ -53,16 +58,34 @@ class _mainPageState extends State<mainPage> {
                   child: Column(
                     children: [
                       Text("Height"),
-                      Text("176", style: TextStyle(color: Color(0xFFFF8888),fontSize: 50,fontWeight: FontWeight.bold, 
+                      Text("$height", style: TextStyle(color: Color(0xFFFF8888),fontSize: 50,fontWeight: FontWeight.bold, 
                       )
                       ),
                       Row(children: [
                         SizedBox(width: 20),
-                        FloatingActionButton(onPressed: null,child: Icon(Icons.remove,size: 40,color: Colors.red,
+                        FloatingActionButton(onPressed:(){
+                          setState(() {
+                          height--;
+                          bmiTotal = calculatorBMI(height: height, Weight: Weight);  
+                          });
+                          
+                        },
+                          child: Icon(Icons.remove,
+                          size: 40,
+                          color: Colors.red,
                         ),
                         ),
                         SizedBox(width: 20),
-                        FloatingActionButton(onPressed: null,child: Icon(Icons.add,size: 40, color: Colors.blue,
+                        FloatingActionButton(onPressed: (){
+                          setState(() {
+                          height++;
+                          bmiTotal = calculatorBMI(height: height, Weight: Weight);  
+                          });
+                          
+                        },
+                        child: Icon(Icons.add,
+                        size: 40,
+                         color: Colors.blue,
                         ),
                         ),
                         
@@ -77,16 +100,34 @@ class _mainPageState extends State<mainPage> {
                   child: Column(
                     children: [
                       Text("Weight"),
-                      Text("176", style: TextStyle(color: Color(0xFFFF8888),fontSize: 50,fontWeight: FontWeight.bold, 
+                      Text("$Weight", style: TextStyle(color: Color(0xFFFF8888),fontSize: 50,fontWeight: FontWeight.bold, 
                       )
                       ),
                       Row(children: [
                         SizedBox(width: 20),
-                        FloatingActionButton(onPressed: null,child: Icon(Icons.remove,size: 40,color: Colors.red,
+                        FloatingActionButton(onPressed: (){
+                          setState(() {
+                          Weight--;
+                          bmiTotal = calculatorBMI(height: height, Weight: Weight);  
+                          });
+                          
+                        },
+                        child: Icon(Icons.remove,
+                        size: 40,
+                        color: Colors.red,
                         ),
                         ),
                         SizedBox(width: 20),
-                        FloatingActionButton(onPressed: null,child: Icon(Icons.add,size: 40, color: Colors.blue,
+                        FloatingActionButton(onPressed: (){
+                          setState(() {
+                          Weight++;
+                          bmiTotal = calculatorBMI(height: height, Weight: Weight);  
+                          });
+                          
+                        },
+                        child: Icon(Icons.add,
+                        size: 40,
+                         color: Colors.blue,
                         ),
                         ),
                         
@@ -98,6 +139,7 @@ class _mainPageState extends State<mainPage> {
                 ),
                 ],
               ),
+              SizedBox(height: 50),
               Column(
                         children: [
                           Text("BMI", style: TextStyle(
@@ -106,11 +148,11 @@ class _mainPageState extends State<mainPage> {
                             fontSize: 20 
                           ),
                            ),
-                          Text("21.00",
+                          Text("$bmiTotal",
                           style: TextStyle(
                             color: ktextColor,
                             fontWeight: FontWeight.bold,
-                            fontSize: 30
+                            fontSize: 80
                           ),
                           )
                         ],
@@ -124,4 +166,10 @@ class _mainPageState extends State<mainPage> {
      
     
   }
+
+  double calculatorBMI({required height,required int Weight}){
+        return Weight / (height* height);
+  }
+
+
 }
